@@ -1,6 +1,6 @@
 {
   "name": "docker-reaper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Time to reclaim your hard drive from massive docker containers.",
   "main": "index.js",
   "scripts": {
