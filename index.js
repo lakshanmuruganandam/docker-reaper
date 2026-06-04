@@ -24,14 +24,14 @@ const banner = `
 `;
 
 console.log(pc.cyan(banner));
-console.log(pc.gray('    Time to reclaim your hard drive.\n'));
+console.log(pc.gray('    Time to reclaim your hard drive.'));
+console.log(pc.dim('    Architected by @lakshanmuruganandam\n'));
 
 try {
   // Check if docker is installed and running
   execSync('docker info', { stdio: 'ignore' });
 } catch (e) {
   console.log(pc.red('❌ Docker is not running or not installed. Please start Docker first.'));
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
   process.exit(1);
 }
 
@@ -57,7 +57,6 @@ try {
 
   if (targets.length === 0) {
     console.log(pc.green('✨ Your Docker environment is completely clean. No dead containers or dangling images found.'));
-    console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
     process.exit(0);
   }
 
@@ -81,7 +80,6 @@ try {
 
   if (selected.length === 0) {
     console.log(pc.gray('\nMission aborted. No resources deleted.'));
-    console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
     process.exit(0);
   }
 
@@ -94,7 +92,6 @@ try {
 
   if (!confirm) {
     console.log(pc.gray('\nMission aborted.'));
-    console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
     process.exit(0);
   }
 
@@ -120,8 +117,6 @@ try {
       { padding: 1, margin: { top: 1 }, borderStyle: 'round', borderColor: 'green' }
     )
   );
-
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
 
 } catch (error) {
   console.error(pc.red('\nAn unexpected error occurred:'), error.message);
