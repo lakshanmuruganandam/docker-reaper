@@ -1,14 +1,23 @@
 {
   "name": "docker-reaper",
   "version": "1.0.4",
-  "description": "",
+  "description": "Time to reclaim your hard drive from massive docker containers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "docker",
+    "cleanup",
+    "cli",
+    "reaper",
+    "prune",
+    "containers",
+    "images",
+    "volumes"
+  ],
+  "author": "Lakshan Muruganandam <lakshan@example.com>",
+  "license": "MIT",
   "dependencies": {
     "boxen": "^8.0.1",
     "cli-spinners": "^3.4.0",
